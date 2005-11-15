@@ -37,9 +37,6 @@ python setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
-%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}/logilab/astng/
-%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}/logilab/astng/
-
 find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm -f {} \;
 
 # see install section of python-logilab-common for explanation
