@@ -1,6 +1,7 @@
 
 %define	module	astng
 Summary:	Python Abstract Syntax Tree New Generation
+Summary(pl):	Abstrakcyjne drzewa sk³adniowe Pythona nowej generacji
 Name:		python-logilab-astng
 Version:	0.13.1
 Release:	1
@@ -20,9 +21,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The aim of this module is to provide a common base representation of
-python source code for projects such as pychecker, pyreverse,
+Python source code for projects such as pychecker, pyreverse,
 pylint... Well, actually the development of this library is essentialy
 governed by pylint's needs.
+
+%description -l pl
+Celem tego modu³u jest dostarczenie wspólnej bazowej reprezentacji
+kodu ¼ród³owego Pythona dla projektów takich jak pychecker, pyreverse,
+pylint... W³a¶ciwie tworzenie tej biblioteki jest istotnie kierowane
+potrzebami pylinta.
 
 %prep
 %setup -q -n %{module}-%{version}
