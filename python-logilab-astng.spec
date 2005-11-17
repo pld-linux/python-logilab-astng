@@ -13,7 +13,7 @@ URL:		http://www.logilab.org/projects/astng
 BuildRequires:	python-devel
 BuildRequires:	python-modules >= 2.2.1
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.112
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	python-logilab-common
 BuildArch:	noarch
@@ -44,7 +44,7 @@ python setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
-find $RPM_BUILD_ROOT%{py_sitescriptdir} -name \*.py -exec rm -f {} \;
+%py_postclean
 
 # see install section of python-logilab-common for explanation
 rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/logilab/__init__.*
