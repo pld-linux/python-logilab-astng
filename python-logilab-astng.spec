@@ -3,12 +3,12 @@
 Summary:	Python Abstract Syntax Tree New Generation
 Summary(pl):	Abstrakcyjne drzewa sk³adniowe Pythona nowej generacji
 Name:		python-logilab-astng
-Version:	0.15.0
+Version:	0.15.1
 Release:	1
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	ftp://ftp.logilab.fr/pub/astng/%{module}-%{version}.tar.gz
-# Source0-md5:	dc327faa79b131b349d3672f88a255d2
+# Source0-md5:	2a7fb54c7059309759aa7f4d7d1f029d
 URL:		http://www.logilab.org/projects/astng
 BuildRequires:	python-devel
 BuildRequires:	python-modules >= 2.2.1
