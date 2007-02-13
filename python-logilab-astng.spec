@@ -1,7 +1,7 @@
 
 %define	module	logilab-astng
 Summary:	Python Abstract Syntax Tree New Generation
-Summary(pl.UTF-8):   Abstrakcyjne drzewa składniowe Pythona nowej generacji
+Summary(pl.UTF-8):	Abstrakcyjne drzewa składniowe Pythona nowej generacji
 Name:		python-logilab-astng
 Version:	0.16.3
 Release:	1
