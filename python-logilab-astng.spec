@@ -11,7 +11,7 @@ Source0:	ftp://ftp.logilab.fr/pub/astng/%{module}-%{version}.tar.gz
 # Source0-md5:	29a89f58aebcf9e0f07f205e66aa2d6b
 URL:		http://www.logilab.org/projects/astng
 BuildRequires:	python-devel
-BuildRequires:	python-modules >= 2.2.1
+BuildRequires:	python-modules >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
