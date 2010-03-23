@@ -9,6 +9,7 @@ License:	GPL
 Group:		Development/Languages/Python
 Source0:	ftp://ftp.logilab.fr/pub/astng/%{module}-%{version}.tar.gz
 # Source0-md5:	f3b9e324be1e59d521fbd0239bd7262b
+Patch0:		%{name}-recursion.patch
 URL:		http://www.logilab.org/projects/astng
 BuildRequires:	python-devel
 BuildRequires:	python-modules >= 1:2.5
@@ -33,6 +34,7 @@ potrzebami pylinta.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 python setup.py build
