@@ -1,0 +1,12 @@
+diff -dur logilab-astng-0.21.1.orig/scoped_nodes.py logilab-astng-0.21.1/scoped_nodes.py
+--- logilab-astng-0.21.1.orig/scoped_nodes.py	2011-01-11 15:47:29.000000000 +0100
++++ logilab-astng-0.21.1/scoped_nodes.py	2011-07-08 10:19:38.000000000 +0200
+@@ -342,6 +342,8 @@
+         # XXX this returns non sens when called on an absolute import
+         # like 'pylint.checkers.logilab.astng.utils'
+         # XXX doesn't return absolute name if self.name isn't absolute name
++        if self.absolute_import_activated() and level is None:
++            return modname
+         if level:
+             if self.package:
+                 level = level - 1
