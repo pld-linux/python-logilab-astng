@@ -1,11 +1,10 @@
-
 %define	module	logilab-astng
 Summary:	Python Abstract Syntax Tree New Generation
 Summary(pl.UTF-8):	Abstrakcyjne drzewa składniowe Pythona nowej generacji
 Name:		python-logilab-astng
 Version:	0.23.1
 Release:	1
-License:	GPL
+License:	LGPL v2.1+
 Group:		Development/Languages/Python
 Source0:	ftp://ftp.logilab.fr/pub/astng/%{module}-%{version}.tar.gz
 # Source0-md5:	67b57848eca454b72c8a8bdb93e47adf
@@ -35,19 +34,16 @@ potrzebami pylinta.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%{__python} setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install \
+%{__python} setup.py install \
 	--optimize=2 \
 	--root=$RPM_BUILD_ROOT
 
 %py_postclean
-
-# see install section of python-logilab-common for explanation
-rm -f $RPM_BUILD_ROOT%{py_sitescriptdir}/logilab/__init__.*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,5 +52,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %{py_sitescriptdir}/logilab/astng
-%{py_sitescriptdir}/*.egg-info
-%{py_sitescriptdir}/*.pth
+%{py_sitescriptdir}/logilab_astng-%{version}-py*.egg-info
+%{py_sitescriptdir}/logilab_astng-%{version}-py*-nspkg.pth
