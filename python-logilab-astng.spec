@@ -98,16 +98,20 @@ rm $RPM_BUILD_ROOT%{py3_sitescriptdir}/logilab/__init__.py
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%if %{with python2}
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %{py_sitescriptdir}/logilab/astng
 %{py_sitescriptdir}/logilab_astng-%{version}-py*.egg-info
 %{py_sitescriptdir}/logilab_astng-%{version}-py*-nspkg.pth
+%endif
 
+%if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %{py3_sitescriptdir}/logilab/astng
 %{py3_sitescriptdir}/logilab_astng-%{version}-py*.egg-info
 %{py3_sitescriptdir}/logilab_astng-%{version}-py*-nspkg.pth
+%endif
