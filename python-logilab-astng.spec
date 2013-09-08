@@ -1,3 +1,4 @@
+# NOTE: for versions >= 1 see python-astroid.spec (module has been renamed)
 
 # Conditional build:
 %bcond_without  python2 # Python 2.x module
