@@ -21,7 +21,7 @@ BuildRequires:	python-modules >= 1:2.5
 %endif
 %if %{with python3}
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python3-2to3
 BuildRequires:	python3-devel
 BuildRequires:	python3-distribute
