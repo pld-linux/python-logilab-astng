@@ -24,7 +24,6 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python3-2to3
 BuildRequires:	python3-devel
-BuildRequires:	python3-distribute
 BuildRequires:	python3-modules >= 1:3.1
 %endif
 %pyrequires_eq	python-modules
